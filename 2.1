@@ -1,0 +1,20 @@
+import math
+
+def max_checks_in_binary_search(n):
+    """
+    Вычисляет максимальное количество проверок для бинарного поиска.
+    
+    :param n: количество элементов в списке
+    :return: максимальное количество проверок
+    """
+    return math.ceil(math.log2(n))
+
+# 1.1 Список из 128 элементов
+n1 = 128
+checks1 = max_checks_in_binary_search(n1)
+print(f"Максимальное количество проверок для списка из {n1} элементов: {checks1}")
+
+# 1.2 Список из 256 элементов
+n2 = n1 * 2
+checks2 = max_checks_in_binary_search(n2)
+print(f"Максимальное количество проверок для списка из {n2} элементов: {checks2}")
